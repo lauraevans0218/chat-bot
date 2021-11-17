@@ -18,10 +18,10 @@ function chatBot() {
 		this.input = input.toLowerCase();
 		
 		if(this.match('(hi|hello|hey|hola|howdy)(\\s|!|\\.|$)'))
-			return "um... hi?";
+			return "Hi, my name is Professor Bob.";
 		
 		if(this.match('what[^ ]* up') || this.match('sup') || this.match('how are you'))
-			return "this github thing is pretty cool, huh?";
+			return "I'm fine. To see today's discussion please write 'next'";
 		
 		if(this.match('l(ol)+') || this.match('(ha)+(h|$)') || this.match('lmao'))
 			return "what's so funny?";
@@ -34,6 +34,9 @@ function chatBot() {
 		
 		if(this.match('(dumb|stupid|is that all)'))
 			return ["hey i'm just a proof of concept", "you can make me smarter if you'd like"];
+		
+		if(this.match('(next|see discussion post|see next)'))
+			return "This would normally be Lorem Ipsum but I couldn't figure out the API to do it automatically so now you just get a ton of text. :)"
 		
 		if(this.input == 'noop')
 			return;
